@@ -1,0 +1,28 @@
+<x-layout>
+
+    <div class="conteiner vh-100 bg-custom2">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1 class="text-center display-1 title-custom">Accedi</h1>
+            </div>
+            <div class="col-6">
+                <form action="/login" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                      <label for="email" class="form-label label-custom">Email</label>
+                      <input name="email" type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label label-custom">Password</label>
+                      <input name="password" type="password" class="form-control" id="password">
+                    </div>
+                    <button type="submit" class="btn btn-custom w-100">Accedi</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    </x-layout>

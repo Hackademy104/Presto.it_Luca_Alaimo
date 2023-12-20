@@ -1,0 +1,130 @@
+/* SCAFFOLDING */
+@font-face {
+    font-family: Titolo;
+    src: url(/public/font/college.ttf);
+}
+@font-face {
+    font-family: testi;
+    src: url(/public/font/ELEGANT\ TYPEWRITER\ Bold.ttf);
+}
+@font-face {
+    font-family: corsivo;
+    src: url(/public/font/Academic\ M54.ttf);
+}
+:root{
+    --myWhite : #fefae0;
+    --myBeige : #e3d5ca;
+    --blueNight : #03045e;
+    --royal : #8ecae6;
+    --orange : #ffb703;
+    --red : #780000;
+}
+/* FINE SCAFFOLDING */
+
+body{
+    overflow-x: hidden;
+}
+/* WELCOME */
+.title-custom{
+    font-family: Titolo;
+    color: #ffb703;
+}
+.bg-custom{
+    background-image: url(/public/img/artem-gavrysh-F6-U5fGAOik-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* FINE WELCOME */
+
+
+/* NAVBAR */
+.buttonav-custom{
+    background-color: #8ecae6;
+}
+.nav-custom{
+    background-color: #072ac8;
+}
+.link-custom{
+    color: #e3d5ca;
+    font-family: Titolo;
+    text-decoration: none;
+    margin-left: 7px;
+    margin-right: 4px;
+}
+.link-custom:hover{
+    color: #ffb703;
+}
+/* FINE NAVBAR */
+
+/* REGISTER */
+.bg-custom2{
+    background-color: #03045e;
+}
+.label-custom{
+    font-family: testi;
+    color: #fefae0;
+}
+.btn-custom{
+    color: #072ac8;
+    box-shadow: 2px 2px 2px 2px #023047;
+    background-color: #fefae0
+    ;
+    font-family: Titolo;
+}
+.btn-custom:hover{
+   background-color: #ffb703;
+}
+
+
+/* FINE REGISTER */
+
+/* TUTTI GLI ANNUNCI */
+.card-custom{
+    font-family: corsivo;
+
+}
+.paragraph-custom{
+    font-family: corsivo;
+    color: #e3d5ca;
+}
+.div-custom{
+    background-color: #780000;
+    height: 150px;
+    width: 100%;
+}
+.bg-category{
+    background-color: #fefae0;
+}
+.h-custom2{
+    height: 10%;
+    font-size: corsivo;
+}
+.bg-footer{
+    background-color: #023047;
+}
+.testi-footer{
+    font-family: testi;
+    color: #fefae0;
+}
+.detail-custom{
+    color: #fefae0;
+}
+/* FINE TUTTI GLI ANNUNCI */
+
+
+.h-custom{
+    height: 450px;
+}
+.img-custom{
+    height: 286px;
+    width: 286px;
+    object-fit: fill;
+}
+.img-preview{
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    
+}
