@@ -12,16 +12,16 @@ class FrontController extends Controller
   public function welcome() {
 
 
-    // $announcements = Announcement::take(6)->get()->sortByDesc('created_at');
+    $announcements = Announcement::take(3)->where('is_accepted',true)->orderBy('created_at','DESC')->get();
  
-        return view('welcome');
+        return view('welcome', compact('announcements'));
     }
 
     public function all_announcements() {
 
 
 
-        $announcements = Announcement::where('is_accepted',true)->orderBy('created_at','DESC')->paginate(6);
+        $announcements = Announcement::where('is_accepted',true)->orderBy('created_at','DESC')->paginate(8);
      
             return view('all-announcements', compact('announcements'));
         }
@@ -45,5 +45,17 @@ class FrontController extends Controller
             return view('announcement.search',compact('announcements'));
         }
 
+        public function chisiamo(){
+            return view('chisiamo');
+        }
+        public function contattaci(){
+            return view('contattaci');
+        }
+
+        public function setlocale($lang){
+
+            session()->put('locale', $lang);
+            return redirect()->back();
+        }
     
 }

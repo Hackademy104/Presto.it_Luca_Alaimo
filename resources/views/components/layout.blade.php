@@ -7,7 +7,10 @@
     <title>Presto.it</title>
     @livewireStyles
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/222fe94cce.js" crossorigin="anonymous"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <link rel="icon" href="{{ asset('img/Presto.png') }}" type="image/x-icon"/>
 
 </head>
 <body>
@@ -26,5 +29,8 @@
 <script>
     AOS.init();
   </script>
+
+
+
 </body>
 </html>

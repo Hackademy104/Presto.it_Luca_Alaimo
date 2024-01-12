@@ -34,10 +34,17 @@ Route::patch('/accept/announcement/{announcement}', [RevisorController::class, '
 Route::patch('/rifiuta/announcemnt/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
 
 // DIVENTA REVISORE
-Route::get('/richiesta/revisore', [RevisorController::class,'becomeRevisor'])->name('become.revisor');
+Route::get('/richiesta/revisore', [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 // RENDI REVISORE
 Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 
 // RICERCA ANNUNCIO
 Route::get('/ricerca/annuncio', [FrontController::class,'searchAnnouncements'])->name('announcements.search');
+
+// CHI SIAMO
+Route::get('/chisiamo', [FrontController::class,'chisiamo'])->name('chisiamo');
+// CONTATTACI
+Route::get('/contattaci',[FrontController::class,'contattaci'])->name('contattaci');
+// LANGUEGE
+Route::post('lingue{lang}', [FrontController::class, 'setLocale'])->name('setLocale');

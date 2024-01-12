@@ -9,7 +9,7 @@
            @forelse ($announcements as $announcement)
            <div class="col-12 col-md-4 col-lg-4 mb-5 mt-5">
             <div class="card" style="width: 18rem;">
-                <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title card-custom">{{$announcement->title}}</h5>
                   <p class="card-text card-custom">{{$announcement->body}}</p>

@@ -3,7 +3,7 @@
 <div class="conteiner vh-100 bg-custom2">
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center display-1 title-custom">Dettaglio {{$announcement->title}}</h1>
+            <h1 class="text-center display-1 title-custom"> {{__('ui.dettaglio')}} {{$announcement->title}}</h1>
         </div>
 
 
@@ -11,7 +11,7 @@
         <div class="row justify-content-center">
 
 
-            <div class="col-10 col-md-6">
+            <div class="col-10 col-md-6 h-25">
                 {{-- <img src="https://picsum.photos/400" alt=""> --}}
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators">
@@ -22,8 +22,8 @@
                  @if($announcement->images)
                     <div class="carousel-inner h-75">
                     @foreach ($announcement->images as $image)
-                      <div class="carousel-item @if($loop->first)active @endif h-custom">
-                        <img src="{{Storage::url($image->path)}}" class="d-block w-100 " alt="...">
+                      <div class="carousel-item @if($loop->first)active @endif">
+                        <img src="{{Storage::url($image->path)}}" class="d-block w-100 h-img" alt="...">
                       </div>
                     @endforeach
                     </div>

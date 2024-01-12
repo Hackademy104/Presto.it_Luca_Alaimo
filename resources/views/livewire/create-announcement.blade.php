@@ -1,4 +1,4 @@
-<div class="col-6 ">
+<div class="col-10 col-md-6 ">
 
  
 
@@ -25,25 +25,25 @@
 @endif
 
     <div class="mb-3" >
-      <label for="title" class="label-custom">Titolo annuncio</label>
+      <label for="title" class="label-custom">{{__('ui.titoloa')}}</label>
       <input wire:model.live='title' type="text" class="form-control">
     </div>
 
     <div class="mb-3">
-        <label for="body" class="label-custom">Descrizione</label>
+        <label for="body" class="label-custom">{{__('ui.descrizione')}}</label>
         <textarea wire:model.live='body' type="text" class="form-control" ></textarea>
       </div>
 
       <div class="mb-3">
-        <label for="price" class="label-custom">Prezzo</label>
+        <label for="price" class="label-custom">{{__('ui.prezzo')}}</label>
         <input wire:model.live='price' type="number" class="form-control">
       </div>
 
       <div class="mb-3">
 
-   <label for="category" class="label-custom">Categoria</label>
+   <label for="category" class="label-custom">{{__('ui.link3')}}</label>
       <select wire:model.defer="category" id="category" class="form-select" >
-            <option value="">Scegli la categoria</option>
+            <option value="">{{__('ui.choose')}}</option>
             @foreach ($categories as $category)
                 <option value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
@@ -61,14 +61,14 @@
     <div class="row">
         <div class="col-12">
             <p class="label-custom">Photo preview:</p>
-            <div class="row border border-4 border-info rounded shadow py-4">
+            <div class="row border border-4 border-info rounded shadow py-4 justify-content-center">
 
 
                 @foreach ($images as $key => $image)
 
                 <div class="col-6 my-3">
                     <div class=" shadow rounded img-preview" style="background-image: url({{$image->temporaryUrl()}})"></div>
-                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto">Cancella</button>
+                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
                 </div>
                     
                 @endforeach
@@ -81,10 +81,11 @@
         
     @endif
 
-      <button type="submit" class="btn btn-custom w-100 mb-5">Crea Annuncio</button>
+      <button type="submit" class="btn btn-custom w-100 mb-5 mt-3">{{__('ui.crea')}}</button>
 
 
 
    </form>
 
 </div>
+

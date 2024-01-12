@@ -25,6 +25,9 @@ return new class extends Migration
             Category::create(['name' =>$category]);
         }
 
+   
+        
+
 
     }
 
